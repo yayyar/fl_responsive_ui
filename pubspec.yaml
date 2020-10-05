@@ -1,8 +1,7 @@
 name: fl_responsive_ui
-description: A new Flutter project.
+description: This is Responsive UI package for Flutter.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/Win-Lwin-Oo/fl_responsive_ui.git
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

@@ -1,11 +1,11 @@
 name: fl_responsive_ui
 description: This is Responsive UI package for Flutter.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Win-Lwin-Oo/fl_responsive_ui.git
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0 <2.0.0"
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: ">=1.17.0"
 
 dependencies:
   flutter:

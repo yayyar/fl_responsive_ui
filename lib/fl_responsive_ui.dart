@@ -14,28 +14,28 @@ class FlResponsiveUI {
   }
 
   //current Screen Size and Proportional according to device
-  double _currentScreenHeight;
-  double _currentScreenWidth;
+  double? _currentScreenHeight;
+  double? _currentScreenWidth;
 
-  double get screenHeight => _currentScreenHeight;
-  double get screenWidth => _currentScreenWidth;
+  double? get screenHeight => _currentScreenHeight;
+  double? get screenWidth => _currentScreenWidth;
 
   final double _referenceScreenHeight = 740;
   final double _referenceScreenWidth = 360;
 
-  void updateScreenDimension({double width, double height}) {
+  void updateScreenDimension({double? width, double? height}) {
     _currentScreenWidth = (width != null) ? width : _currentScreenWidth;
     _currentScreenHeight = (height != null) ? height : _currentScreenHeight;
   }
 
-  double getProportionalHeight({double height}) {
+  double? getProportionalHeight({double? height}) {
     if (_currentScreenHeight == null) return height;
-    return _currentScreenHeight * height / _referenceScreenHeight;
+    return _currentScreenHeight! * height! / _referenceScreenHeight;
   }
 
-  double getProportionalWidth({double width}) {
+  double? getProportionalWidth({double? width}) {
     if (_currentScreenWidth == null) return width;
-    var w = _currentScreenWidth * width / _referenceScreenWidth;
+    var w = _currentScreenWidth! * width! / _referenceScreenWidth;
     return w.ceilToDouble();
   }
 
@@ -48,14 +48,14 @@ class FlResponsiveUI {
   TextStyle getTextStyleRegular(
       {String fontName = 'Roboto-Regular',
         int fontSize = 12,
-        Color color,
+        Color? color,
         bool isChangeAccordingToDeviceSize = true,
-        double characterSpacing,
-        double lineSpacing}) {
+        double? characterSpacing,
+        double? lineSpacing}) {
     double finalFontSize = fontSize.toDouble();
     if (isChangeAccordingToDeviceSize && this._currentScreenWidth != null) {
       finalFontSize =
-          (finalFontSize * _currentScreenWidth) / _referenceScreenWidth;
+          (finalFontSize * _currentScreenWidth!) / _referenceScreenWidth;
     }
     if (characterSpacing != null) {
       return TextStyle(
